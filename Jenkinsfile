@@ -6,7 +6,8 @@ git 'https://github.com/javapiyandroid/JavaCode_core_adv/'
 }
 
 stage('Compile-Package'){
-sh 'mvn package'
+def mvnHome= tool name: '', type: 'maven'
+  sh "${mvnHome}/bin/mvn package"
 } 
 
 }
