@@ -6,9 +6,10 @@ git 'https://github.com/javapiyandroid/JavaCode_core_adv/'
 }
 
 stage('Compile-Package'){
-def mvnHome= tool name: 'M3', type: 'maven'
-  sh "${mvnHome}/bin/mvn package"
+def mvn_version = 'M3'
+  withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] ) {
+  //sh "mvn clean package"
+}
 } 
-
 }
 
