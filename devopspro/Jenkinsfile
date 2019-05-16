@@ -2,7 +2,7 @@ node
 {
 stage('SCM checkout')
 {
-git 'https://github.com/javapiyandroid/JavaCode_core_adv/'
+git 'https://github.com/javapiyandroid/JavaCode_core_adv/devopspro'
 }
 
 stage('Compile-Package'){
